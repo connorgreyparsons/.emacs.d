@@ -16,10 +16,13 @@
 (setq exec-path (append exec-path '("/usr/local/bin")))
 
 ;; modeline
-(display-battery-mode 1)
+(require 'battery)
+(when (and battery-status-function
+           (not (string-match-p "N/A"
+                                (battery-format "%B"
+                                                (funcall battery-status-function)))))
+  (display-battery-mode 1))
 (display-time-mode 1)
-
-
 
 ;; melpa
 (require 'package)
@@ -58,56 +61,55 @@
 ;; ibuffer
 (defalias 'list-buffers 'ibuffer)
 
+
+
+(use-package color-theme-sanityinc-tomorrow
+  :ensure t
+  :config
+(load-theme 'sanityinc-tomorrow-eighties t))
+
 ;; chuck mode
-(add-to-list 'load-path "~/.emacs.d/packages/chuck-mode/")
-(require 'chuck-mode)
-
-(add-hook 'chuck-mode-hook
-          (lambda () (run-hooks 'prog-mode-hook)))
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(company-quickhelp-color-background "#4F4F4F")
- '(company-quickhelp-color-foreground "#DCDCCC")
- '(custom-enabled-themes (quote (sanityinc-tomorrow-eighties)))
- '(custom-safe-themes
-   (quote
-    ("628278136f88aa1a151bb2d6c8a86bf2b7631fbea5f0f76cba2a0079cd910f7d" default)))
- '(display-time-24hr-format t)
- '(display-time-day-and-date t)
- '(package-selected-packages
-   (quote
-    (which-key try rjsx-mode treemacs-magit treemacs-icons-dired treemacs-projectile use-package treemacs color-theme-sanityinc-solarized color-theme-sanityinc-tomorrow osc extempore-mode rainbow-delimiters smartparens company-tern js2-mode zenburn-theme cyberpunk-theme)))
- '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838"))))
-
-;; load theme after init
-;;(add-hook 'after-init-hook (lambda () (load-theme 'zenburn)))
+(use-package chuck-mode
+  :load-path "~/.emacs.d/packages/chuck-mode/"
+  :config
+  (add-hook 'chuck-mode-hook (lambda () (run-hooks 'prog-mode-hook)))
 
 ;;;;;;;; code
-(require 'smartparens-config)
-(add-hook 'prog-mode-hook (lambda ()
-			    (rainbow-delimiters-mode)
-			    (smartparens-mode)))
+
+(use-package rainbow-delimiters
+  :ensure t)
+
+(use-package smartparens
+  :ensure t
+  :config
+  (add-hook 'prog-mode-hook (lambda ()
+			      (rainbow-delimiters-mode)
+			      (smartparens-mode)))))
 
 ;;;;;;;; javascript
 (setq-default js2-basic-offset 2)
 (setq-default js-indent-level 2)
 
-(require 'js2-mode)
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-;; Better imenu
-(add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
-(require 'rjsx-mode)
+(use-package js2-mode
+  :ensure t
+  :config
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+  (add-hook 'js2-mode-hook #'js2-imenu-extras-mode)
+  (add-hook 'js2-mode-hook  (lambda ()
+			      (tern-mode)
+			      (company-mode))))
+
+
+(use-package rjsx-mode
+  :ensure t)
 ;; tern - autocomplete
-(require 'company)
-(require 'company-tern)
-(add-to-list 'company-backends 'company-tern)
-(add-hook 'js2-mode-hook  (lambda ()
-                           (tern-mode)
-                           (company-mode)))
+(use-package company
+  :ensure t)
+(use-package company-tern
+  :ensure t
+  :config
+  (add-to-list 'company-backends 'company-tern))
+
 
 ;;;;;;;; TREEMACS
 (use-package treemacs
@@ -190,3 +192,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(display-time-24hr-format t)
+ '(display-time-day-and-date t))
