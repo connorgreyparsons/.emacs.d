@@ -1,0 +1,99 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/cpars/dxc/TalentManagement/server/" . "config/")
+ ("/Users/cpars/DXC/TalentManagement/server/" . "auth/")
+ ("/Users/cpars/DXC/TalentManagement/" . "server/")
+ ("/Users/cpars/DXC/" . "TalentManagement/")
+ ("/Users/cpars/" . "DXC/")
+ ("/Users/" . "cpars/")
+ ("/" . "Users/")
+ ("/Users/cpars/dxc/" . "TalentManagement/")
+ ("/Users/cpars/.emacs.d/packages/" . "chuck-mode/")
+ ("/Users/cpars/.emacs.d/" . "packages/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/cpars/dxc/TalentManagement/server/config/"
+ "/Users/cpars/DXC/TalentManagement/server/auth/"
+ "/Users/cpars/.emacs.d/"
+ "/Users/cpars/DXC/TalentManagement/client/"
+ "/Users/cpars/DXC/TalentManagement/server/"
+ "/Users/cpars/Pictures/"
+ "/Users/cpars/Documents/"
+ "/Users/cpars/"
+ "/ssh:ec2-user@13.59.81.171:"
+ "/ssh:ec2-user@"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "index.js"
+ "functions.js"
+ "init.el"
+ "ido.last"
+ "index.html"
+ "router.js"
+ "3childface.bmp"
+ "Resume.docx"
+ ".gitignore_global"
+ ".bash_history"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/cpars/dxc/TalentManagement/server/config/" (23690 53789 0 0) "prod/" "index.js" "dev/" "../" "./")
+
+ ("/Users/cpars/dxc/TalentManagement/server/" (23692 18971 0 0) "uploaded_files/" "sandbox/" "router.js" "parsers.js" "parsers/" "package.json" "package-lock.json" "node_modules/" "logger.js" "index.js" "database/" "config/" "commonHelpers.js" "auth/" ".tern-port" "../" "./")
+
+ ("/Users/cpars/DXC/TalentManagement/server/auth/" (23690 53765 0 0) "routes.js" "index.js" "functions.js" "../" "./")
+
+ ("/Users/cpars/.emacs.d/" (23692 21203 0 0) "url/" "tramp" "themes/" "Readme.org~" "Readme.org" "packages/" "init.el~" "init.el" "ido.last~" "ido.last" "games/" "eshell/" "emms/" "elpa/" "bookmarks" "auto-save-list/" ".cache/" "../" "./")
+
+ ("/Users/cpars/DXC/TalentManagement/client/" (23661 31779 0 0) "src/" "index.html" "dist/" ".DS_Store" "../" "./")
+
+ ("/Users/cpars/DXC/TalentManagement/server/" (23692 18971 0 0) "uploaded_files/" "sandbox/" "router.js" "parsers.js" "parsers/" "package.json" "package-lock.json" "node_modules/" "logger.js" "index.js" "database/" "config/" "commonHelpers.js" "auth/" ".tern-port" "../" "./")
+
+ ("/Users/cpars/DXC/TalentManagement/" (23688 1431 0 0) "webpack.config.js" "test/" "server/" "README.md" "package.json" "package-lock.json" "node_modules/" "dummy-data/" "client/" ".vscode/" ".idea/" ".gitignore" ".git/" ".eslintrc.js" ".env" ".DS_Store" "../" "./")
+
+ ("/Users/cpars/DXC/" (23672 3004 0 0) "TalentManagement/" "skills-csvs/" "POC-Motorola/" "parsons-hr-cert.pdf" "parsons-gdpr-cert.pdf" "new/" "index.html" "github-token.txt" "ec2-user@54.183.229.169" "ec2-user@54.183.229.167" "daily-extract-formatted.csv" "daily-extract-format-test.csv" "ConnorParsons_SkillsRatings.docx" "Connor_Parsons_11561594_01162019.docx" "aws-training/" "aws-infrastructure/" ".DS_Store" "../" "./")
+
+ ("/Users/cpars/dev/" (23680 587 0 0) "wesbos/" "training/" "test-app/" "personal_website/" "index_2.html" "error.html" "cgp_website/" "basic things every programmer should know_.html" "aws/" "2016-11-course.database-structures/" ".DS_Store" "../" "./")
+
+ ("/Users/cpars/Pictures/" (22938 17283 0 0) "Photos Library.photoslibrary/" "Photo Booth Library/" "NOLASkyline 12.39.16 PM.bmp" "License.JPG" "IMG_0962.JPG" "IMG_0480.JPG" "IMG0003B.jpg" "IMG0003A.jpg" "IMG0002A.jpg" "7NOLASkyline.bmp" "56-Broken-Kindle-Screens/" "3childface.bmp" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/cpars/Documents/" (23596 63031 0 0) "Untitled.pdf" "Resume.pdf" "Resume.docx" "PathwaysResume.pdf" "P1030503.JPG" "P1030503 copy.JPG" "newdemo.txt" "Microsoft User Data/" "melonkids/" "libraries/" "immersion2016/" "immersion-precourse/" "ID_Back.pdf" "Delta/" "Big Bend 4 kat.docx" "audacity/" "adult/" ".localized" ".DS_Store" "../" "./")
+
+ ("/Users/cpars/" (23692 17734 0 0) "~" "Wallpapers/" "VM-shared-dir/" "VirtualBox VMs/" "test0test/" "test.hs~" "test.hs" "scheme-test.scm" "Public/" "Pictures/" "pfYyLJil8Xj0.gif" "package-lock.json" "Music/" "Movies/" "Library/" "kat/" "ISOs/" "iCloud Drive (Archive)/" "extempore/" "exercism/" "ex.txt" "env/" "emacs-test/" "DXC/" "Downloads/" "Documents/" "dev/" "Desktop/" "Creative Cloud Files/" "chuck-lessons/" "blue_noise.gif" "bin/" "asdf~" "asdf.ck~" "asdf.ck" "asd.ck" "Applications/" "aad_secret" "3Rth.gif" ".zshrc.omz-uninstalled-20190123223057" ".zshrc" ".zsh_history" ".zcompdump-MBP-5.3" ".zcompdump-Connor’s MacBook Pro-5.3" ".zcompdump-Connor’s MacBook Pro-5.2" ".wget-hsts" ".vue-templates/" ".vscode/" ".vnc/" ".vimrc" ".viminfo" ".vim/" ".v8flags.5.4.500.44.ConnorParsons.json" ".v8flags.5.4.500.44.c7c3de7a7fc5ad50579a043fc659e504.json" ".tutor.swp" ".Trash/" ".tmux.conf" ".tmux/" ".test.xtm.swp" ".templateengine/" ".swp" ".subversion/" ".standard-cache/" ".ssh/" ".sqlite_history" ".spacemacs" ".sonic-pi/" ".ServiceHub/" ".rnd" ".python_history" ".pylint.d/" ".psql_history" ".pm2/" ".pgAdmin4.startup.log" ".pgadmin/" ".oracle_jre_usage/" ".omnisharp/" ".nuget/" ".npmrc" ".npm/" ".node_repl_history" ".node-gyp/" ".netrc" ".mysql_history" ".mono/" ".mongorc.js" ".matplotlib/" ".lolcommits/" ".local/" ".keys/" ".jsbeautifyrc" ".ionic/" ".IdentityService/" ".heroku/" ".gitignore_global~" ".gitignore_global" ".gitconfig" ".ghc/" ".gem/" ".geiser_history.guile" ".emacs.d/" ".emacs-2.d/" ".electron-gyp/" ".electron/" ".dxc-id" ".DS_Store" ".dotnet/" ".docker/" ".dir_colors" ".dbshell" ".cups/" ".cordova/" ".config/" ".CFUserTextEncoding" ".cache/" ".cabal/" ".bashrc~" ".bashrc" ".bash_sessions/" ".bash_profile.macports-saved_2019-02-24_at_14:26:07" ".bash_profile" ".bash_history" ".babel.json" ".aspnet/" ".android/" ".#test" "#.gitignore-global#" "../" "./")
+
+ ("/Users/cpars/dxc/TalentManagement/client/src/components/find-talent/" (23686 57256 0 0) "userModalContents.jsx" "userCard.jsx" "teamModalContents.jsx" "talentColumn.jsx" "skillsColumn.jsx" "selectedValue.jsx" "searchbar.jsx" "search.jsx" "roleSkillGroupParents.js" "results.jsx" "projectsColumn.jsx" "projectCard.jsx" "modalColumn.jsx" "index.jsx" "card.jsx" "addTeamModalContents.jsx" ".tern-port" ".#index.jsx" "#index.jsx#" "../" "./")
+
+ ("/Users/cpars/.emacs-2.d/" (23666 8358 0 0) "tests/" "spacemacs.mk" "README.md" "private/" "news/" "layers/" "init.el" "eshell/" "elpa/" "doc/" "core/" "CONTRIBUTING.org" "COMMUNITY.org" "CHANGELOG.org" "auto-save-list/" "assets/" ".travis.yml" ".travis-build.sh" ".projectile" ".gitignore" ".github/" ".git/" ".cache/" "../" "./")
+
+ ("/Users/cpars/dxc/TalentManagement/" (23686 39196 0 0) "webpack.config.js" "test/" "server/" "README.md" "package.json" "package-lock.json" "node_modules/" "dummy-data/" "client/" ".vscode/" ".idea/" ".gitignore" ".git/" ".eslintrc.js" ".env" ".DS_Store" "../" "./")
+
+ ("/Users/cpars/dxc/TalentManagement/client/" (23661 31779 0 0) "src/" "index.html" "dist/" ".DS_Store" "../" "./")
+
+ ("/Users/cpars/dxc/TalentManagement/client/src/" (23686 33188 0 0) "styles/" "index.jsx" "components/" "../" "./")
+
+ ("/Users/cpars/dxc/TalentManagement/client/src/components/" (23651 11337 0 0) "projects/" "navigation/" "landing/" "find-talent/" "elements/" "add-talent/" "../" "./")
+
+ ("/Users/cpars/dxc/" (23672 3004 0 0) "TalentManagement/" "skills-csvs/" "POC-Motorola/" "parsons-hr-cert.pdf" "parsons-gdpr-cert.pdf" "new/" "index.html" "github-token.txt" "ec2-user@54.183.229.169" "ec2-user@54.183.229.167" "daily-extract-formatted.csv" "daily-extract-format-test.csv" "ConnorParsons_SkillsRatings.docx" "Connor_Parsons_11561594_01162019.docx" "aws-training/" "aws-infrastructure/" ".DS_Store" "../" "./")
+
+ ("/Users/cpars/dxc/TalentManagement/server/parsers/" (23681 15417 0 0) "user_skills.csv" "tester.js" "skills.js" "skills.csv" "skillPopulation.js" "skillLevels.js" "skillLevelFamilies.js" "skill_levels.csv" "skill_families.csv" "scrapeResumeDirectory.js" "resumeUser.js" "parseUserCsvs.js" "parseFormCsvs.js" "output.csv" "deDupeUsers.js" "convertBI.js" "../" "./")
+
+ ("/Users/cpars/.ssh/" (23680 13674 0 0) "nola-talentmgmt-bastion.pem" "nola-talentmgmt-appserver-key.pem" "known_hosts.old" "known_hosts" "id_rsa.pub" "id_rsa" "github_rsa.pub" "github_rsa" "config~" "config" "../" "./")
+
+ ("/Users/" (23662 4057 0 0) "work-user/" "Shared/" "katherinedevay/" "Guest/" "cpars/" "ConnorParsons/" ".localized" "../" "./")
+
+ ("~/.ssh/" (23680 13674 0 0) "nola-talentmgmt-bastion.pem" "nola-talentmgmt-appserver-key.pem" "known_hosts.old" "known_hosts" "id_rsa.pub" "id_rsa" "github_rsa.pub" "github_rsa" "config~" "config" "../" "./")
+
+ ("/Users/cpars/.emacs.d/packages/chuck-mode/" (23678 2566 0 0) "README.md" "chuck-mode.el~" "chuck-mode.el" "chuck-core.el~" "chuck-core.el" "chuck-console.el" "../" "./")
+
+ ("/Users/cpars/.emacs.d/packages/" (23673 63287 0 0) "chuck-mode/" ".git/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

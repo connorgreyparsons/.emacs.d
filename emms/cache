@@ -1,0 +1,3 @@
+;;; .emms-cache -*- mode: emacs-lisp; coding: utf-8; -*-
+(puthash "http://www.somafm.com/groovesalad.pls" '(*track* (type . url) (name . "http://www.somafm.com/groovesalad.pls") (metadata "SomaFM: Groove Salad" "http://www.somafm.com/groovesalad.pls" 1 streamlist)) emms-cache-db)
+(puthash "http://www.somafm.com/dronezone.pls" '(*track* (type . streamlist) (name . "http://www.somafm.com/dronezone.pls") (metadata "SomaFM: Drone Zone" "http://www.somafm.com/dronezone.pls" 1 streamlist)) emms-cache-db)

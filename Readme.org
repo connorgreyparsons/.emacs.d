@@ -1,0 +1,18 @@
+#+STARTUP: showall
+
+* Lesson 1
+** Part 1
+  Introducing the series and setting up the package manager
+  - show melpa
+  - set up melpa
+** Installing some packages
+  - installed use-package
+  - installed try
+  - installed which-key
+* Lesson 2
+  Show some org-mode
+  - review init.el
+  - set up Readme.org
+* Links
+  - [[github.com][github]]
+
