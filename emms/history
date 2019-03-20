@@ -1,9 +1,0 @@
-;;; emms history -*- mode: emacs-lisp; coding: utf-8; -*-
-(
-;; active playlist
-" *EMMS Playlist*"
-;; playlists: ((BUFFER_NAME SELECT_POSITION TRACKS) ...)
-((" *EMMS Playlist*" 1 ((*track* (type . url) (name . "http://www.somafm.com/groovesalad.pls") (metadata "SomaFM: Groove Salad" "http://www.somafm.com/groovesalad.pls" 1 streamlist)) (*track* (type . url) (name . "http://www.somafm.com/groovesalad.pls") (metadata "SomaFM: Groove Salad" "http://www.somafm.com/groovesalad.pls" 1 streamlist)) (*track* (type . streamlist) (name . "http://www.somafm.com/dronezone.pls") (metadata "SomaFM: Drone Zone" "http://www.somafm.com/dronezone.pls" 1 streamlist)))))
-;; play method
-((emms-repeat-track) (emms-repeat-playlist))
-)
