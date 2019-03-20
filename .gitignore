@@ -1,3 +1,6 @@
 *
 !.gitignore
 !init.el
+!packages/
+!packages/*
+!packages/*/*

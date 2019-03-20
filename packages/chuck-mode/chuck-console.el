@@ -1,5 +1,5 @@
 ;;; chuck-console.el --- ChucK console
-
+asdf
 ;; Author:  2018 Eugeny Volobuev
 ;; Maintainer: qulert@gmail.com
 ;; Keywords: processes, languages
