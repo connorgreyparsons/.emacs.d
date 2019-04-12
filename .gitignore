@@ -1,7 +1,4 @@
 *
 !.gitignore
 !init.el
-!org-init.org
-!packages/
-!packages/*
-!packages/*/*
+!readme.org

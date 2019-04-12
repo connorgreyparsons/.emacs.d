@@ -12,11 +12,6 @@
      (add-hook 'text-mode-hook 'linum-mode)
      (add-hook 'prog-mode-hook 'linum-mode)
    #+END_SRC
-** set path
-   #+BEGIN_SRC emacs-lisp
-     (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
-     (setq exec-path (append exec-path '("/usr/local/bin")))
-   #+END_SRC
 ** modeline - show battery status, datetime
    #+BEGIN_SRC emacs-lisp
      (require 'battery)
@@ -112,13 +107,6 @@
 ** winner-mode
    #+BEGIN_SRC emacs-lisp
      (winner-mode 1)
-   #+END_SRC
-** chuck-mode
-   #+BEGIN_SRC emacs-lisp
-     (use-package chuck-mode
-       :load-path "~/.emacs.d/packages/chuck-mode/"
-       :config
-       (add-hook 'chuck-mode-hook (lambda () (run-hooks 'prog-mode-hook)))
    #+END_SRC
 * code
 ** meta
