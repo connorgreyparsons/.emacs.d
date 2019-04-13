@@ -118,11 +118,11 @@
 *** smartparens
     #+BEGIN_SRC emacs-lisp
       (use-package smartparens
-	:ensure t
-	:config
-	(add-hook 'prog-mode-hook (lambda ()
-				    (rainbow-delimiters-mode)
-				    (smartparens-mode)))))
+        :ensure t
+        :config
+        (add-hook 'prog-mode-hook (lambda ()
+                                    (rainbow-delimiters-mode)
+                                    (smartparens-mode))))
     #+END_SRC
 ** javascript
 *** offset, indent
