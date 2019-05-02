@@ -108,6 +108,22 @@
    #+BEGIN_SRC emacs-lisp
      (winner-mode 1)
    #+END_SRC
+** elfeed
+#+BEGIN_SRC emacs-lisp
+    (use-package elfeed
+    :ensure t)
+    (setq elfeed-feeds
+	  '("https://www.eff.org/rss/updates.xml"
+	    "http://feeds.arstechnica.com/arstechnica/index/"
+	    "https://news.ycombinator.com/rss"
+	    "https://reddit.com/r/webdev/.rss"
+	    "https://reddit.com/r/compsci/.rss"
+	    "https://reddit.com/r/programming/.rss"
+	    "https://reddit.com/r/opensource/.rss"
+	    "https://reddit.com/r/freesoftware/.rss"
+	    "https://reddit.com/r/emacs/.rss"
+	    "http://feeds.feedburner.com/TechCrunch/"))
+#+END_SRC
 * code
 ** meta
 *** rainbow-delimiters
