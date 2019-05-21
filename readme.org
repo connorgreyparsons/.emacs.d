@@ -1,11 +1,17 @@
 * meta
-** remove gui elements, set to fullscreen on launch, inhibit startup message
+** general behavior
    #+BEGIN_SRC emacs-lisp
      (menu-bar-mode -1)
      (toggle-scroll-bar -1) 
      (tool-bar-mode -1)
      (set-frame-parameter nil 'fullscreen 'fullboth)
      (setq inhibit-startup-message t)
+     (setq visible-bell nil
+           ring-bell-function 'flash-mode-line)
+     (defun flash-mode-line ()
+       (invert-face 'mode-line)
+       (run-with-timer 0.1 nil #'invert-face 'mode-line))
+     (global-auto-revert-mode t)
    #+END_SRC
 ** show line nums in prog, text modes
    #+BEGIN_SRC emacs-lisp
@@ -50,7 +56,7 @@
 *** C-x k kills current buffer
 #+BEGIN_SRC emacs-lisp
   (global-set-key (kbd "C-x k") 'kill-this-buffer)
-    #+END_SRC
+#+END_SRC
 * general
 ** use-package
    #+BEGIN_SRC emacs-lisp
@@ -136,7 +142,7 @@
 ** dired-sidebar
    #+BEGIN_SRC emacs-lisp
               (use-package dired-sidebar
-               :bind (("C-x p" . dired-sidebar-toggle-sidebar))
+               :bind (("C-x t" . dired-sidebar-toggle-sidebar))
                :ensure t
                :commands (dired-sidebar-toggle-sidebar)
                :init
