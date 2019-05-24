@@ -31,9 +31,9 @@
 ** theme
 *** color
    #+BEGIN_SRC emacs-lisp
-     (use-package color-theme-sanityinc-tomorrow
+     (use-package color-theme-sanityinc-solarized
        :ensure t
-       :config (load-theme 'sanityinc-tomorrow-eighties t))
+       :config (load-theme 'sanityinc-solarized-dark t))
    #+END_SRC
 *** font
     #+BEGIN_SRC emacs-lisp
@@ -113,7 +113,7 @@
    #+BEGIN_SRC emacs-lisp
      (use-package avy
      :ensure t
-     :bind ("M-s" . avy-goto-char-2))
+     :bind ("M-s" . avy-goto-char))
    #+END_SRC
 ** ibuffer
    #+BEGIN_SRC emacs-lisp
