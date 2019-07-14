@@ -1,17 +1,21 @@
 * meta
 ** general behavior
    #+BEGIN_SRC emacs-lisp
-     (menu-bar-mode -1)
-     (toggle-scroll-bar -1) 
-     (tool-bar-mode -1)
-     (set-frame-parameter nil 'fullscreen 'fullboth)
-     (setq inhibit-startup-message t)
-     (setq visible-bell nil
-           ring-bell-function 'flash-mode-line)
-     (defun flash-mode-line ()
-       (invert-face 'mode-line)
-       (run-with-timer 0.1 nil #'invert-face 'mode-line))
-     (global-auto-revert-mode t)
+          (menu-bar-mode -1)
+          (toggle-scroll-bar -1) 
+          (tool-bar-mode -1)
+          (set-frame-parameter nil 'fullscreen 'fullboth)
+          (setq inhibit-startup-message t)
+          (setq visible-bell nil
+                ring-bell-function 'flash-mode-line)
+          (defun flash-mode-line ()
+            (invert-face 'mode-line)
+            (run-with-timer 0.1 nil #'invert-face 'mode-line))
+          (global-auto-revert-mode t)
+     ;; (use-package exwm :ensure t
+     ;;     :config 
+     ;;     (use-package exwm-config
+     ;;         :config (exwm-config-default)))
    #+END_SRC
 ** show line nums in prog, text modes
    #+BEGIN_SRC emacs-lisp
@@ -29,15 +33,14 @@
      (display-time-mode 1)
    #+END_SRC
 ** theme
-*** color
+*** COMMENT color
    #+BEGIN_SRC emacs-lisp
-     (use-package color-theme-sanityinc-solarized
-       :ensure t
-       :config (load-theme 'sanityinc-solarized-dark t))
+          (use-package monokai-theme
+            :ensure t)
    #+END_SRC
 *** font
     #+BEGIN_SRC emacs-lisp
-      (set-frame-font "Hack 12" nil t)
+      (set-frame-font "Inconsolata 12" nil t)
     #+END_SRC
 ** shortcuts
 *** window navigation
