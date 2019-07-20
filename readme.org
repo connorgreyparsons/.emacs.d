@@ -16,6 +16,11 @@
      ;;     :config 
      ;;     (use-package exwm-config
      ;;         :config (exwm-config-default)))
+     (defun disable-scroll-bars (frame)
+       (modify-frame-parameters frame
+                                '((vertical-scroll-bars . nil)
+                                  (horizontal-scroll-bars . nil))))
+     (add-hook 'after-make-frame-functions 'disable-scroll-bars)
    #+END_SRC
 ** show line nums in prog, text modes
    #+BEGIN_SRC emacs-lisp
@@ -33,14 +38,15 @@
      (display-time-mode 1)
    #+END_SRC
 ** theme
-*** COMMENT color
+*** color
    #+BEGIN_SRC emacs-lisp
           (use-package monokai-theme
             :ensure t)
    #+END_SRC
 *** font
     #+BEGIN_SRC emacs-lisp
-      (set-frame-font "Inconsolata 12" nil t)
+      (setq default-frame-alist '((font . "Inconsolata 12")))
+      ;; (set-frame-font "Inconsolata 12" nil t)
     #+END_SRC
 ** shortcuts
 *** window navigation
@@ -59,6 +65,13 @@
 *** C-x k kills current buffer
 #+BEGIN_SRC emacs-lisp
   (global-set-key (kbd "C-x k") 'kill-this-buffer)
+#+END_SRC
+** undo-tree
+#+BEGIN_SRC emacs-lisp
+  (use-package undo-tree
+  :ensure t
+  :init
+  (global-undo-tree-mode))
 #+END_SRC
 * general
 ** use-package
