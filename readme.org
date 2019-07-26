@@ -40,8 +40,8 @@
 ** theme
 *** color
    #+BEGIN_SRC emacs-lisp
-          (use-package monokai-theme
-            :ensure t)
+     (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+     (load-theme `tron-legacy t)
    #+END_SRC
 *** font
     #+BEGIN_SRC emacs-lisp
