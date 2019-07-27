@@ -164,6 +164,11 @@
                :init
                (setq dired-sidebar-theme 'nerd))
   #+END_SRC
+** auctex
+   #+BEGIN_SRC emacs-lisp
+     (use-package auctex
+       :ensure t)
+   #+END_SRC
 * code
 ** meta
 *** rainbow-delimiters
