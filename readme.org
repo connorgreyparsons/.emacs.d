@@ -27,16 +27,6 @@
      (add-hook 'text-mode-hook 'linum-mode)
      (add-hook 'prog-mode-hook 'linum-mode)
    #+END_SRC
-** modeline - show battery status, datetime
-   #+BEGIN_SRC emacs-lisp
-     (require 'battery)
-     (when (and battery-status-function
-		(not (string-match-p "N/A"
-				     (battery-format "%B"
-						     (funcall battery-status-function)))))
-       (display-battery-mode 1))
-     (display-time-mode 1)
-   #+END_SRC
 ** theme
 *** color
    #+BEGIN_SRC emacs-lisp
@@ -102,28 +92,28 @@
 ** swiper
    #+BEGIN_SRC emacs-lisp
      (use-package swiper
-     :ensure try
-     :config
-     (progn
-     (ivy-mode 1)
-     (setq ivy-use-virtual-buffers t)
-     (global-set-key "\C-s" 'swiper)
-     (global-set-key (kbd "C-c C-r") 'ivy-resume)
-     (global-set-key (kbd "<f6>") 'ivy-resume)
-     (global-set-key (kbd "M-x") 'counsel-M-x)
-     (global-set-key (kbd "C-x C-f") 'counsel-find-file)
-     (global-set-key (kbd "<f1> f") 'counsel-describe-function)
-     (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
-     (global-set-key (kbd "<f1> l") 'counsel-load-library)
-     (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
-     (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
-     (global-set-key (kbd "C-c g") 'counsel-git)
-     (global-set-key (kbd "C-c j") 'counsel-git-grep)
-     (global-set-key (kbd "C-c k") 'counsel-ag)
-     (global-set-key (kbd "C-x l") 'counsel-locate)
-     (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
-     (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
-     ))
+       :ensure t
+       :config
+       (progn
+	 (ivy-mode 1)
+	 (setq ivy-use-virtual-buffers t)
+	 (global-set-key "\C-s" 'swiper)
+	 (global-set-key (kbd "C-c C-r") 'ivy-resume)
+	 (global-set-key (kbd "<f6>") 'ivy-resume)
+	 (global-set-key (kbd "M-x") 'counsel-M-x)
+	 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
+	 (global-set-key (kbd "<f1> f") 'counsel-describe-function)
+	 (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+	 (global-set-key (kbd "<f1> l") 'counsel-load-library)
+	 (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+	 (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+	 (global-set-key (kbd "C-c g") 'counsel-git)
+	 (global-set-key (kbd "C-c j") 'counsel-git-grep)
+	 (global-set-key (kbd "C-c k") 'counsel-ag)
+	 (global-set-key (kbd "C-x l") 'counsel-locate)
+	 (global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+	 (define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
+	 ))
    #+END_SRC
 ** avy
    #+BEGIN_SRC emacs-lisp
@@ -168,6 +158,35 @@
    #+BEGIN_SRC emacs-lisp
      (use-package auctex
        :ensure t)
+   #+END_SRC
+** symon
+   #+BEGIN_SRC emacs-lisp
+     (use-package symon
+       :ensure t
+       :config
+       (progn
+	 (setq symon-sparkline-type 'plain)
+	 (define-symon-monitor symon-current-date-time-monitor
+	   :interval 60
+	   :display (propertize
+		     (format-time-string "%m-%d/%u %H:%M ")
+		     'face 'font-lock-type-face))
+	 (setq symon-monitors
+	       (cond ((memq system-type '(gnu/linux cygwin))
+		      '(symon-current-date-time-monitor
+			symon-linux-memory-monitor
+			symon-linux-cpu-monitor
+			symon-linux-network-rx-monitor
+			symon-linux-network-tx-monitor
+			symon-linux-battery-monitor))
+		     ((memq system-type '(windows-nt))
+		      '(symon-current-date-time-monitor
+			symon-windows-memory-monitor
+			symon-windows-cpu-monitor
+			symon-windows-network-rx-monitor
+			symon-windows-network-tx-monitor
+			symon-windows-battery-monitor))))
+	 (symon-mode)))
    #+END_SRC
 * code
 ** meta
